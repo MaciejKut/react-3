@@ -23,3 +23,5 @@ chrome-user-data
 *.swp
 *.swo
 .eslintrc.js
+.babelrc
+script-compiled.js

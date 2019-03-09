@@ -5,37 +5,26 @@ var ContactForm = React.createClass({
 
     render: function () {
         return (
-            React.createElement('form', { className: 'contactForm' },
-                React.createElement('div', { className: 'inputFields1' },
-                    React.createElement('div', { className: 'singleIput' },
-                        React.createElement('p', { className: 'contactFormLabel' }, 'Imię:'),
-                        React.createElement('input', {
-                            type: 'text',
-                            placeholder: 'Imię',
-                            value: this.props.contact.firstName,
-                        }),
-                    ),
-                    React.createElement('div', { className: 'singleInput' },
-                        React.createElement('p', { className: 'contactFormLabel' }, 'Nazwisko:'),
-                        React.createElement('input', {
-                            type: 'text',
-                            placeholder: 'Nazwisko',
-                            value: this.props.contact.lastName,
-                        }),
-                    ),
-                ),
-                React.createElement('div', { className: 'inputFields1' },
-                    React.createElement('div', { className: 'singleInput' },
-                        React.createElement('p', { className: 'contactFormLabel' }, 'email:'),
-                        React.createElement('input', {
-                            type: 'email',
-                            placeholder: 'Email',
-                            value: this.props.contact.email,
-                        }),
-                    ),
-                    React.createElement('button', { type: 'submit' }, "Dodaj kontakt")
-                ),
-            )
+            <form className='contactForm'>
+                <div className='inputFields1'>
+                    <div className='singleIput'>
+                        <p className='contactFormLabel'>Imię: </p>
+                        <input type='text' placeholder='Imię' value={this.props.contact.firstName}></input>
+                    </div>
+                    <div className='singleIput'>
+                        <p className='contactFormLabel'>Nazwisko: </p>
+                        <input type='text' placeholder='Nazwisko' value={this.props.contact.lastName}></input>
+                    </div>
+                </div>
+                <div className='inputFields1'>
+                    <div className='singleIput'>
+                        <p className='contactFormLabel'>Imię: </p>
+                        <input type='email' placeholder='Email' value={this.props.contact.email}></input>
+                    </div>
+                    <button type='submit'>Dodaj kontakt</button>
+                </div>
+
+            </form>
         )
     },
 })
